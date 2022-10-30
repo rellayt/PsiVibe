@@ -3,29 +3,73 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.1",
-    "@types/node": "^16.11.26",
-    "@types/react": "^17.0.44",
-    "@types/react-dom": "^17.0.15",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.6.3",
-    "web-vitals": "^2.1.4"
+    "@datorama/akita": "^7.0.1",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@material-ui/core": "^4.12.3",
+    "@mindspace-io/react": "^1.8.1",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/material": "^5.0.4",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.33",
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "axios": "^0.23.0",
+    "babel-jest": "^26.6.0",
+    "babel-preset-env": "^1.7.0",
+    "formik": "^2.2.9",
+    "gsap": "^3.10.2",
+    "immer": "^9.0.7",
+    "moment": "^2.29.1",
+    "query-string": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-google-recaptcha": "^2.1.0",
+    "react-imask": "^6.2.2",
+    "react-moment": "^1.1.1",
+    "react-router-dom": "^5.3.0",
+    "react-router-transition": "^2.1.0",
+    "react-scripts": "4.0.3",
+    "react-svg-morph": "^0.2.1",
+    "rxjs": "^7.4.0",
+    "styled-components": "^5.3.1",
+    "ts-transformer-keys": "^0.4.3",
+    "typescript": "^4.4.4",
+    "universal-cookie": "^4.0.4",
+    "use-async-effect": "^2.2.3",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.11"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,json}": [
+      "prettier --write"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --verbose ./tests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "**/*.spec.tsx"
+    ]
+  },
+  "test": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
     ]
   },
   "browserslist": {
@@ -39,5 +83,26 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-google-recaptcha": "^2.1.2",
+    "@types/react-input-mask": "^3.0.1",
+    "@types/react-router-dom": "^5.3.1",
+    "@types/react-router-transition": "^2.1.1",
+    "@types/react-svg-morph": "^0.2.1",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-flowtype": "^6.1.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "jest": "^26.6.0",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.4.1",
+    "react-input-mask": "^1.0.7"
   }
 }

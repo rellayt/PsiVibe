@@ -1,11 +1,11 @@
-import { ReactElement } from 'react';
-import { Wrapper } from './LogoWithTitle.styles';
-import {LogoProps} from "../Logo/Logo";
+import React, { ForwardedRef, ReactElement } from 'react';
+import { Wrapper } from '../Logo/Logo.styles';
+import { ReactComponent as SvgLogo } from '../../../assets/icons/logo-with-title.svg';
 
-const LogoWithTitle = ({}: LogoProps): ReactElement => {
+const LogoWithTitle = ({ onClick, color, width }: any, ref: ForwardedRef<HTMLDivElement>): ReactElement => (
+	<Wrapper width={width} color={color} ref={ref}>
+		<SvgLogo fill={color} onClick={onClick} />
+	</Wrapper>
+);
 
-    return (
-        <Wrapper></Wrapper>
-    )};
-
-export default LogoWithTitle
+export default React.forwardRef(LogoWithTitle);
